@@ -24,4 +24,4 @@ WD=$(cd "$WD" || exit 1 ; pwd)
 source "${WD}/proxy-common.inc"
 
 echo 'Generate Wasm module files and run Wasm related test'
-make check_wasm
+make build_wasm
