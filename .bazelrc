@@ -69,3 +69,8 @@ build:macos --cxxopt=-Wno-range-loop-analysis
 build:macos --host_cxxopt=-Wno-range-loop-analysis
 build:macos --cxxopt=-Wno-deprecated-declarations
 build:macos --host_cxxopt=-Wno-deprecated-declarations
+
+common:zig --enable_platform_specific_config
+build:zig --sandbox_add_mount_pair=/tmp
+build:zig --platforms @zig_sdk//platform:linux_amd64
+build:zig --extra_toolchains @zig_sdk//toolchain:linux_amd64_gnu.2.28
